@@ -3,6 +3,7 @@ package com.sonradersin.codevolley;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         CDN.Request(Request.Method.GET, "https://android.codesoftware.xyz/test", CDN.getPARAMS(), new CVCallback() {
             @Override
             public void onSuccess(String response) {
-                Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                Log.v("RESPONSE",response);
             }
         });
 
